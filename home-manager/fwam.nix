@@ -1,5 +1,6 @@
 { pkgs, ... }: 
 {
+    imports = [ ./modules ];
     programs.home-manager.enable = true;
     home = {
         username = "fwam";
