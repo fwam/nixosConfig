@@ -9,7 +9,7 @@
             thunderbird bitwarden
             ## IM
             (discord.override { withVencord = true; }) 
-            tdesktop cinny-desktop
+            tdesktop element-desktop
         ];
 
     };
