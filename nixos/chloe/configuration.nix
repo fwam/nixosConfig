@@ -4,7 +4,12 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ../age-paths.nix
+      
+      ./services
     ];
+
+
   nix.settings = {
       experimental-features = [ "nix-command" "flakes "];
       auto-optimise-store = true;
@@ -22,7 +27,6 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   networking.networkmanager.enable = true;
-
   # Set your time zone.
   time.timeZone = "Europe/Warsaw";
 
@@ -47,7 +51,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  services.openssh.enable = true;
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
