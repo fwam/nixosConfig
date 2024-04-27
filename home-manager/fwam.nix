@@ -8,6 +8,8 @@
         packages = with pkgs; [
             ## General
             thunderbird bitwarden emacs
+            ## Admin shite
+            google-cloud-sdk kubernetes terraform ansible
             ## IM
             (discord.override { withVencord = true; }) 
             tdesktop element-desktop 
