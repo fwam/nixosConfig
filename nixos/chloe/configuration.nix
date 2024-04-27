@@ -63,9 +63,11 @@
     pulse.enable = true;
   };
 
+  programs.zsh.enable = true;
   users.users.fwam = {
     isNormalUser = true;
     description = "fwam";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
@@ -78,6 +80,6 @@
   environment.systemPackages = with pkgs; [
      vim git 
   ];
-
+  
   system.stateVersion = "23.11"; # Did you read the comment?
 }
