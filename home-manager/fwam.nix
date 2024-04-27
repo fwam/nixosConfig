@@ -10,7 +10,7 @@
             thunderbird bitwarden
             ## IM
             (discord.override { withVencord = true; }) 
-            tdesktop element-desktop
+            tdesktop element-desktop 
         ];
 
     };
