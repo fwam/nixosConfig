@@ -1,3 +1,3 @@
 {
-    imports = [ ./shell ./editors.nix ];
+    imports = [ ./shell ];
 }
