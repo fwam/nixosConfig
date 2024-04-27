@@ -1,6 +1,8 @@
 { pkgs, config, ... }: 
 {
     networking.wg-quick.interfaces."wg0" = {
+        postUp = "iptables -w -A FORWARD -i %i -j ACCEPT; iptables -w -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o %i -j MASQUERADE";
+        postDown = "iptables -w -D FORWARD -i %i -j ACCEPT; iptables -w -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o %i -j MASQUERADE";
         privateKeyFile = config.age.secrets.chloeWireguard.path;
         address = [
             "10.21.37.3/24"
