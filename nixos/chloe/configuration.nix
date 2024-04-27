@@ -78,7 +78,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-     vim git 
+     vim git fd ripgrep 
   ];
   
   system.stateVersion = "23.11"; # Did you read the comment?
