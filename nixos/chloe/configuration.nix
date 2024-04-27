@@ -5,8 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../age-paths.nix
-      
-      ./services
+      ./modules
     ];
 
 
