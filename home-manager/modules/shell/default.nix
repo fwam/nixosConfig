@@ -1,4 +1,7 @@
 { config, ... }: {
+
+    imports = [ ./git.nix ];
+
     programs.zsh = {
         enable = true;
         initExtra = ''
